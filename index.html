@@ -16,54 +16,51 @@
        SECTION 1 — HERO + EVENT BOOKING
        ================================================================ -->
     <section class="hero" id="hero">
-        <div class="hero__bg">
-            <img src="Images/Renders/Front Facade.jpg" alt="Sunshine Residences — Front Facade Artist Impression"
-                loading="eager">
+        <div class="hero__image">
+            <picture>
+                <source srcset="Images/optimized/front-facade.webp" type="image/webp">
+                <img src="Images/optimized/front-facade.jpg" alt="Sunshine Residences — Front Facade Artist Impression"
+                    loading="eager">
+            </picture>
         </div>
-        <div class="hero__overlay"></div>
 
         <div class="hero__content">
             <img src="Images/Logos/hero_logo.svg" alt="Sunshine" class="hero__logo">
             <h1 class="hero__headline">Experience Sunshine — In Person</h1>
             <p class="hero__subtitle">See the luxury finishes, experience the ocean views, and meet the
                 developer.<br>Choose your session below. Spots are limited.</p>
-        </div>
 
-        <div class="events">
-            <div class="events__grid">
-                <!-- Event 1 -->
-                <div class="event-card reveal">
-                    <div class="event-card__day">Thursday</div>
-                    <div class="event-card__date">12 March</div>
-                    <div class="event-card__time">5:00 PM</div>
-                    <div class="event-card__spots"><strong>8</strong> spots remaining</div>
-                    <a href="#" class="btn btn--primary" id="cta-event-1">Reserve Your Spot</a>
-                </div>
+            <div class="events">
+                <div class="events__grid">
+                    <!-- Event 1 -->
+                    <div class="event-card reveal">
+                        <div class="event-card__day">Thursday</div>
+                        <div class="event-card__date">12 March</div>
+                        <div class="event-card__time">5:00 PM</div>
+                        <div class="event-card__spots"><strong>8</strong> spots remaining</div>
+                        <button class="btn btn--gold" id="cta-event-1" data-event="Thursday 12 March · 5:00 PM">Reserve Your Spot</button>
+                    </div>
 
-                <!-- Event 2 -->
-                <div class="event-card reveal reveal-delay-1">
-                    <div class="event-card__day">Friday</div>
-                    <div class="event-card__date">20 March</div>
-                    <div class="event-card__time">9:00 AM</div>
-                    <div class="event-card__spots"><strong>12</strong> spots remaining</div>
-                    <a href="#" class="btn btn--primary" id="cta-event-2">Reserve Your Spot</a>
-                </div>
+                    <!-- Event 2 -->
+                    <div class="event-card reveal reveal-delay-1">
+                        <div class="event-card__day">Friday</div>
+                        <div class="event-card__date">20 March</div>
+                        <div class="event-card__time">9:00 AM</div>
+                        <div class="event-card__spots"><strong>12</strong> spots remaining</div>
+                        <button class="btn btn--gold" id="cta-event-2" data-event="Friday 20 March · 9:00 AM">Reserve Your Spot</button>
+                    </div>
 
-                <!-- Event 3 — Final Event -->
-                <div class="event-card reveal reveal-delay-2">
-                    <div class="event-card__badge">Final Event</div>
-                    <div class="event-card__day">Thursday</div>
-                    <div class="event-card__date">26 March</div>
-                    <div class="event-card__time">5:00 PM</div>
-                    <div class="event-card__spots"><strong>6</strong> spots remaining</div>
-                    <a href="#" class="btn btn--primary" id="cta-event-3">Reserve Your Spot</a>
+                    <!-- Event 3 — Final Event -->
+                    <div class="event-card reveal reveal-delay-2">
+                        <div class="event-card__badge">Final Event</div>
+                        <div class="event-card__day">Thursday</div>
+                        <div class="event-card__date">26 March</div>
+                        <div class="event-card__time">5:00 PM</div>
+                        <div class="event-card__spots"><strong>6</strong> spots remaining</div>
+                        <button class="btn btn--gold" id="cta-event-3" data-event="Thursday 26 March · 5:00 PM">Reserve Your Spot</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="hero__scroll-hint">
-            <span></span>
-            Scroll
         </div>
     </section>
 
@@ -117,8 +114,11 @@
         <div class="container">
             <div class="vision__grid">
                 <div class="vision__image reveal">
-                    <img src="Images/Renders/Rear Facade.jpg" alt="Sunshine Residences — Rear Facade Artist Impression"
-                        loading="lazy">
+                    <picture>
+                        <source srcset="Images/optimized/rear-facade.webp" type="image/webp">
+                        <img src="Images/optimized/rear-facade.jpg" alt="Sunshine Residences — Rear Facade Artist Impression"
+                            loading="lazy">
+                    </picture>
                 </div>
                 <div class="vision__copy">
                     <p class="section-label reveal">A Shared Vision</p>
@@ -156,8 +156,13 @@
             <div class="interiors__grid">
                 <!-- Living -->
                 <div class="interior-card reveal">
-                    <img src="Images/Renders/Living Room.jpg" alt="Artist Impression — Living Spaces" loading="lazy">
-                    <div class="interior-card__overlay">
+                    <div class="interior-card__image">
+                        <picture>
+                            <source srcset="Images/optimized/living-room.webp" type="image/webp">
+                            <img src="Images/optimized/living-room.jpg" alt="Artist Impression — Living Spaces" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="interior-card__body">
                         <h3 class="interior-card__title">Living</h3>
                         <p class="interior-card__desc">Open-plan spaces framed by soaring ocean vistas, with an electric
                             fireplace and seamless indoor-outdoor connection.</p>
@@ -166,8 +171,13 @@
 
                 <!-- Kitchen -->
                 <div class="interior-card reveal reveal-delay-1">
-                    <img src="Images/Renders/Kitchen.jpg" alt="Artist Impression — Kitchen" loading="lazy">
-                    <div class="interior-card__overlay">
+                    <div class="interior-card__image">
+                        <picture>
+                            <source srcset="Images/optimized/kitchen.webp" type="image/webp">
+                            <img src="Images/optimized/kitchen.jpg" alt="Artist Impression — Kitchen" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="interior-card__body">
                         <h3 class="interior-card__title">Kitchen</h3>
                         <p class="interior-card__desc">Natural stone island bench, Miele appliances, and cleverly
                             integrated storage designed to cultivate culinary inspiration.</p>
@@ -176,8 +186,13 @@
 
                 <!-- Master Suite -->
                 <div class="interior-card reveal reveal-delay-2">
-                    <img src="Images/Renders/Master Bedroom.jpg" alt="Artist Impression — Master Suite" loading="lazy">
-                    <div class="interior-card__overlay">
+                    <div class="interior-card__image">
+                        <picture>
+                            <source srcset="Images/optimized/master-bedroom.webp" type="image/webp">
+                            <img src="Images/optimized/master-bedroom.jpg" alt="Artist Impression — Master Suite" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="interior-card__body">
                         <h3 class="interior-card__title">Master Suite</h3>
                         <p class="interior-card__desc">A secluded oasis with plush woollen carpets, walk-in wardrobe,
                             and a spa-like ensuite with freestanding tub.</p>
@@ -186,9 +201,14 @@
 
                 <!-- Rooftop -->
                 <div class="interior-card reveal reveal-delay-3">
-                    <img src="Images/Renders/Rooftop - Day.jpg" alt="Artist Impression — Private Rooftop"
-                        loading="lazy">
-                    <div class="interior-card__overlay">
+                    <div class="interior-card__image">
+                        <picture>
+                            <source srcset="Images/optimized/rooftop-day.webp" type="image/webp">
+                            <img src="Images/optimized/rooftop-day.jpg" alt="Artist Impression — Private Rooftop"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="interior-card__body">
                         <h3 class="interior-card__title">Private Rooftop</h3>
                         <p class="interior-card__desc">Uninterrupted ocean views, built-in BBQ, and vibrant landscaping
                             — a true penthouse experience in apartment form.</p>
@@ -204,8 +224,11 @@
     <section class="location" id="location">
         <div class="container">
             <div class="location__hero-image reveal">
-                <img src="Images/Landscape/SunshineBeach_Photography_30.jpg" alt="Sunshine Beach — Aerial View"
-                    loading="lazy">
+                <picture>
+                    <source srcset="Images/optimized/sunshine-beach.webp" type="image/webp">
+                    <img src="Images/optimized/sunshine-beach.jpg" alt="Sunshine Beach — Aerial View"
+                        loading="lazy">
+                </picture>
             </div>
             <div class="location__grid">
                 <div class="location__col">
@@ -318,17 +341,17 @@
                 <div class="cta-card reveal">
                     <div class="cta-card__date">Thu 12 March</div>
                     <div class="cta-card__time">5:00 PM</div>
-                    <a href="#" class="btn btn--primary" id="cta-bottom-event-1">Reserve Your Spot</a>
+                    <button class="btn btn--primary" id="cta-bottom-event-1" data-event="Thursday 12 March · 5:00 PM">Reserve Your Spot</button>
                 </div>
                 <div class="cta-card reveal reveal-delay-1">
                     <div class="cta-card__date">Fri 20 March</div>
                     <div class="cta-card__time">9:00 AM</div>
-                    <a href="#" class="btn btn--primary" id="cta-bottom-event-2">Reserve Your Spot</a>
+                    <button class="btn btn--primary" id="cta-bottom-event-2" data-event="Friday 20 March · 9:00 AM">Reserve Your Spot</button>
                 </div>
                 <div class="cta-card reveal reveal-delay-2">
                     <div class="cta-card__date">Thu 26 March</div>
                     <div class="cta-card__time">5:00 PM · Final</div>
-                    <a href="#" class="btn btn--primary" id="cta-bottom-event-3">Reserve Your Spot</a>
+                    <button class="btn btn--primary" id="cta-bottom-event-3" data-event="Thursday 26 March · 5:00 PM">Reserve Your Spot</button>
                 </div>
             </div>
         </div>
@@ -349,6 +372,66 @@
         </p>
         <p class="footer__credits">65–67 Elanda Street, Sunshine Beach &nbsp;·&nbsp; By Milona</p>
     </footer>
+
+    <!-- ================================================================
+       BOOKING MODAL
+       ================================================================ -->
+    <div class="modal" id="booking-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal__backdrop"></div>
+        <div class="modal__card">
+            <button class="modal__close" aria-label="Close">&times;</button>
+
+            <!-- Form State -->
+            <div class="modal__form-state" id="modal-form-state">
+                <p class="section-label">Reserve Your Spot</p>
+                <h2 class="modal__title" id="modal-title">Experience Sunshine — In Person</h2>
+                <p class="modal__event-date" id="modal-event-date"></p>
+
+                <form id="booking-form" novalidate>
+                    <div class="form-group">
+                        <label for="field-name">Full Name</label>
+                        <input type="text" id="field-name" name="name" required autocomplete="name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="field-email">Email Address</label>
+                        <input type="email" id="field-email" name="email" required autocomplete="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="field-mobile">Mobile Number</label>
+                        <input type="tel" id="field-mobile" name="mobile" required autocomplete="tel" placeholder="04XX XXX XXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="field-reservations">Number of Reservations</label>
+                        <select id="field-reservations" name="reservations" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--gold modal__submit" id="modal-submit">
+                        <span class="modal__submit-text">Confirm Reservation</span>
+                        <span class="modal__submit-loading" aria-hidden="true">
+                            <svg class="spinner" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+                            Submitting…
+                        </span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Success State -->
+            <div class="modal__success-state" id="modal-success-state" aria-hidden="true">
+                <div class="modal__success-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                </div>
+                <h2 class="modal__title">You're In.</h2>
+                <p class="modal__success-text">We've reserved your spot. You'll receive a confirmation email shortly with all the details.</p>
+                <p class="modal__success-event" id="modal-success-event"></p>
+                <button class="btn btn--outline modal__done">Done</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
