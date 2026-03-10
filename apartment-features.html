@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunshine — Only Four Masterfully Crafted</title>
+  <style>
+    /* ——— Font Faces ——— */
+    @font-face {
+      font-family: 'Hatton';
+      src: url('Fonts/Hatton-Light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Walsheim';
+      src: url('Fonts/GT-Walsheim-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Walsheim';
+      src: url('Fonts/gt-walsheim-medium-web.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GT Walsheim';
+      src: url('Fonts/GTWalsheimPro-Light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ——— Reset & Base ——— */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-brown: #6B5734;
+      --color-bg: #E8E4DD;
+      --font-serif: 'Hatton', 'Georgia', serif;
+      --font-sans: 'GT Walsheim', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* ——— Description Section ——— */
+    .description-section {
+      width: 100%;
+      max-width: 1100px;
+      text-align: center;
+      padding: 5rem 2rem 6rem;
+    }
+
+    /* ——— Large Headline ——— */
+    .description-headline {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.25;
+      color: var(--color-brown);
+      margin-bottom: 3.5rem;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ——— Features Sub-section ——— */
+    .features-heading {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-brown);
+      margin-bottom: 2rem;
+    }
+
+    .features-grid {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 3.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      min-width: 110px;
+      padding: 0 0.5rem;
+    }
+
+    .feature-number {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 4.2rem;
+      line-height: 1;
+      color: var(--color-brown);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-plus {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--color-brown);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-label {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-brown);
+      line-height: 1.5;
+    }
+
+    /* ——— Responsive ——— */
+    @media (max-width: 768px) {
+      .description-headline {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .features-grid {
+        flex-wrap: wrap;
+        gap: 2.5rem 1.5rem;
+      }
+
+      .feature-item {
+        min-width: 100px;
+      }
+
+      .feature-number {
+        font-size: 3.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .description-section {
+        padding: 3rem 1.5rem 4rem;
+      }
+
+      .description-headline {
+        font-size: 1.6rem;
+      }
+
+      .features-grid {
+        gap: 2rem 0;
+      }
+
+      .feature-item {
+        flex: 0 0 33.33%;
+        min-width: unset;
+      }
+
+      .feature-number {
+        font-size: 2.8rem;
+      }
+
+      .features-heading {
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="description-section">
+    <h1 class="description-headline">Only four masterfully crafted luxury beachside apartments.</h1>
+
+    <h2 class="features-heading">Each Apartment Includes</h2>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="feature-number">4</span>
+        <span class="feature-label">Beds</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-number">3.5</span>
+        <span class="feature-label">Bathrooms</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-number">2</span>
+        <span class="feature-label">Living</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-number">2</span>
+        <span class="feature-label">Garages</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-plus">+</span>
+        <span class="feature-label">Private<br>Pool</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

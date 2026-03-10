@@ -1,0 +1,229 @@
+{
+  "data": {
+    "branding": {
+      "colorScheme": "light",
+      "fonts": [
+        {
+          "family": "GT Walsheim",
+          "role": "body"
+        },
+        {
+          "family": "Hatton-Light",
+          "role": "heading"
+        },
+        {
+          "family": "SangBleuSans-Light",
+          "role": "display"
+        },
+        {
+          "family": "neue-haas-grotesk-display",
+          "role": "unknown"
+        }
+      ],
+      "colors": {
+        "primary": "#815B1A",
+        "accent": "#6F4600",
+        "background": "#FFF7F1",
+        "textPrimary": "#0A0A0A",
+        "link": "#6F4600"
+      },
+      "typography": {
+        "fontFamilies": {
+          "primary": "GT Walsheim",
+          "heading": "Hatton-Light"
+        },
+        "fontStacks": {
+          "heading": [
+            "Hatton-Light"
+          ],
+          "body": [
+            "Helvetica Neue",
+            "Helvetica",
+            "Roboto",
+            "Arial",
+            "sans-serif"
+          ],
+          "paragraph": [
+            "GT Walsheim"
+          ]
+        },
+        "fontSizes": {
+          "h1": "38.4px",
+          "h2": "34.4px",
+          "body": "19.2px"
+        }
+      },
+      "spacing": {
+        "baseUnit": 4,
+        "borderRadius": "0px"
+      },
+      "components": {},
+      "images": {
+        "logo": "https://sunshineresidences.com.au/img/hero_logo.svg",
+        "favicon": "https://sunshineresidences.com.au/img/favicon.png",
+        "ogImage": null
+      },
+      "__llm_logo_reasoning": {
+        "selectedIndex": 3,
+        "reasoning": "Selected #3 because it is visible, located in the header, and matches the brand name 'Sunshine' from the URL and page title. It is also the largest and most prominent logo, indicating it is the primary brand logo.",
+        "confidence": 0.85,
+        "source": "llm"
+      },
+      "personality": {
+        "tone": "professional",
+        "energy": "medium",
+        "targetAudience": "real estate buyers"
+      },
+      "designSystem": {
+        "framework": "custom",
+        "componentLibrary": ""
+      },
+      "confidence": {
+        "buttons": 0.5,
+        "colors": 0.9,
+        "overall": 0.7
+      },
+      "__llm_metadata": {
+        "logoSelection": {
+          "llmCalled": true,
+          "llmSucceeded": true,
+          "finalSource": "llm",
+          "rawLogoSelection": {
+            "selectedLogoIndex": 3,
+            "selectedLogoReasoning": "Selected #3 because it is visible, located in the header, and matches the brand name 'Sunshine' from the URL and page title. It is also the largest and most prominent logo, indicating it is the primary brand logo.",
+            "confidence": 0.85
+          }
+        },
+        "buttonClassification": {
+          "llmCalled": false,
+          "llmSucceeded": true
+        }
+      }
+    },
+    "metadata": {
+      "og:description": [
+        "Please click the link to complete this form.",
+        "Please click the link to complete this form."
+      ],
+      "HandheldFriendly": [
+        "true",
+        "true"
+      ],
+      "title": "Sunshine | Sunshine Beach",
+      "description": "Immerse yourself in Sunshine Beach. Four masterfully crafted luxury beachside apartments.",
+      "slack-app-id": [
+        "AHNMASS8M",
+        "AHNMASS8M"
+      ],
+      "og:image": [
+        "https://cdn.jotfor.ms/assets/img/landing/opengraph.png",
+        "https://cdn.jotfor.ms/assets/img/landing/opengraph.png"
+      ],
+      "og:url": [
+        "https://form.jotform.com/233331557892462",
+        "https://form.jotform.com/233331557892462"
+      ],
+      "author": "Earl St",
+      "og:title": [
+        "Sunshine Website Form",
+        "Sunshine Website Form"
+      ],
+      "viewport": [
+        "width=device-width, initial-scale=1.0, user-scalable=no",
+        "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=1",
+        "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=1"
+      ],
+      "language": "en",
+      "favicon": "https://sunshineresidences.com.au/img/favicon.png",
+      "scrapeId": "019cd475-5537-736c-a5fb-650098f59457",
+      "sourceURL": "https://sunshineresidences.com.au",
+      "url": "https://sunshineresidences.com.au/",
+      "statusCode": 200,
+      "contentType": "text/html",
+      "timezone": "America/New_York",
+      "proxyUsed": "basic",
+      "indexId": "9fc2cfa0-033d-4dec-bb65-6c3f86d292d0",
+      "creditsUsed": 1,
+      "concurrencyLimited": false
+    }
+  },
+  "scrape_id": "019cd475-5537-736c-a5fb-650098f59457",
+  "id": "cPifzka5-QUZRfClONgD7",
+  "startedAt": "2026-03-09T21:16:24.741Z",
+  "endedAt": "2026-03-09T21:16:37.706Z",
+  "endpoint": "scrape",
+  "formState": {
+    "extractSetupCompleted": false,
+    "urls": [],
+    "extractSchema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "company_mission": {
+          "type": "string"
+        },
+        "supports_sso": {
+          "type": "boolean"
+        },
+        "is_open_source": {
+          "type": "boolean"
+        },
+        "is_in_yc": {
+          "type": "boolean"
+        }
+      }
+    },
+    "extractPrompt": "Extract the company details, following the schema.",
+    "enableWebSearch": false,
+    "constrainUrls": false,
+    "options": {
+      "onlyMainContent": false,
+      "parsePDF": true,
+      "stealthMode": false,
+      "excludeTags": [],
+      "includeTags": [],
+      "waitFor": "",
+      "timeout": "",
+      "maxAge": "2 days",
+      "ignoreSitemap": false,
+      "crawlEntireDomain": false,
+      "sitemap": "include",
+      "limit": "10",
+      "maxDepth": "",
+      "excludePaths": [],
+      "includePaths": [],
+      "includeSubdomains": false,
+      "search": "",
+      "scrapeContentFromSearchResults": true,
+      "timeBasedSearch": "",
+      "location": "",
+      "prompt": ""
+    },
+    "formats": [
+      "branding"
+    ],
+    "sources": [
+      "web"
+    ],
+    "categories": [],
+    "jsonSchema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "company_name": {
+          "type": "string"
+        },
+        "company_description": {
+          "type": "string"
+        }
+      }
+    },
+    "jsonPrompt": "",
+    "agent": {},
+    "url": "sunshineresidences.com.au",
+    "endpoint": "scrape"
+  },
+  "status": "success",
+  "version": "-CRI2O4EIJpOzbTyLMYhc",
+  "isPreview": false
+}
