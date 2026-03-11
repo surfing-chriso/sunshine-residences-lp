@@ -16,48 +16,48 @@
        SECTION 1 — HERO + EVENT BOOKING
        ================================================================ -->
     <section class="hero" id="hero">
-        <div class="hero__image">
-            <picture>
-                <source srcset="Images/optimized/front-facade.webp" type="image/webp">
-                <img src="Images/optimized/front-facade.jpg" alt="Sunshine Residences — Front Facade Artist Impression"
-                    loading="eager">
-            </picture>
+        <video class="hero__video" autoplay muted playsinline loop preload="auto"
+            poster="Images/Marketing Artwork/video_hero.jpg"
+            src="https://player.vimeo.com/progressive_redirect/playback/893204620/rendition/1080p/file.mp4?loc=external&log_user=0&signature=73a6433feedd8781e34e41024101fb455274bf60e7bc1a5cc324f7f0a9c0e0bf"></video>
+        <div class="hero__header">
+            <img src="Images/Logos/hero_logo.svg" alt="Sunshine" class="hero__logo hero-animate">
+            <h1 class="hero__headline hero-animate hero-animate--1"><strong>Display Gallery Event</strong></h1>
+            <p class="hero__venue hero-animate hero-animate--2">2/16 Lanyana Way, Noosa Heads</p>
         </div>
 
-        <div class="hero__content">
-            <img src="Images/Logos/hero_logo.svg" alt="Sunshine" class="hero__logo">
-            <h1 class="hero__headline">Experience Sunshine — In Person</h1>
-            <p class="hero__subtitle">See the luxury finishes, experience the ocean views, and meet the
-                developer.<br>Choose your session below. Spots are limited.</p>
+        <p class="hero__subtitle hero-animate hero-animate--3 shimmer">Choose your session. Reservations essential.</p>
 
+        <div class="hero__events hero-animate hero-animate--4">
             <div class="events">
                 <div class="events__grid">
-                    <!-- Event 1 -->
-                    <div class="event-card reveal">
-                        <div class="event-card__day">Thursday</div>
-                        <div class="event-card__date">12 March</div>
-                        <div class="event-card__time">5:00 PM</div>
-                        <div class="event-card__spots"><strong>8</strong> spots remaining</div>
-                        <button class="btn btn--gold" id="cta-event-1" data-event="Thursday 12 March · 5:00 PM">Reserve Your Spot</button>
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="event-card reveal reveal-delay-1">
+                    <!-- Event 1 — Morning -->
+                    <div class="event-card">
                         <div class="event-card__day">Friday</div>
                         <div class="event-card__date">20 March</div>
-                        <div class="event-card__time">9:00 AM</div>
-                        <div class="event-card__spots"><strong>12</strong> spots remaining</div>
-                        <button class="btn btn--gold" id="cta-event-2" data-event="Friday 20 March · 9:00 AM">Reserve Your Spot</button>
+                        <div class="event-card__time">Morning · 9 – 10 AM</div>
+                        <div class="event-card__availability"><span class="availability-dot"></span> Low availability
+                        </div>
+                        <button class="btn btn--gold" id="cta-event-1" data-event="Friday 20 March · 9 – 10 AM">Reserve
+                            Now</button>
+                    </div>
+
+                    <!-- Event 2 — Afternoon -->
+                    <div class="event-card">
+                        <div class="event-card__day">Friday</div>
+                        <div class="event-card__date">20 March</div>
+                        <div class="event-card__time">Evening · 5 – 6 PM</div>
+                        <button class="btn btn--gold" id="cta-event-2" data-event="Friday 20 March · 5 – 6 PM">Reserve
+                            Now</button>
                     </div>
 
                     <!-- Event 3 — Final Event -->
-                    <div class="event-card reveal reveal-delay-2">
+                    <div class="event-card">
                         <div class="event-card__badge">Final Event</div>
                         <div class="event-card__day">Thursday</div>
                         <div class="event-card__date">26 March</div>
-                        <div class="event-card__time">5:00 PM</div>
-                        <div class="event-card__spots"><strong>6</strong> spots remaining</div>
-                        <button class="btn btn--gold" id="cta-event-3" data-event="Thursday 26 March · 5:00 PM">Reserve Your Spot</button>
+                        <div class="event-card__time">Evening · 5 – 6 PM</div>
+                        <button class="btn btn--gold" id="cta-event-3" data-event="Thursday 26 March · 5 – 6 PM">Reserve
+                            Now</button>
                     </div>
                 </div>
             </div>
@@ -73,8 +73,10 @@
             <p class="section-label reveal">What To Expect</p>
             <h2 class="section-heading reveal">Your Exclusive Preview</h2>
             <p class="expect__text reveal">
-                Walk through the display centre and see the luxury finishes first hand. Experience the sweeping ocean
-                views from the site. Meet Christian from Milona and hear the vision behind Sunshine.
+                Visit our Display Gallery at <strong>2/16 Lanyana Way, Noosa Heads</strong> and see the luxury finishes
+                first hand.
+                Experience scale models, material samples, and walk through the vision for Sunshine.
+                Meet Christian from Milona and hear the story behind the development.
             </p>
             <div class="expect__features reveal">
                 <div class="expect__feature">
@@ -116,8 +118,8 @@
                 <div class="vision__image reveal">
                     <picture>
                         <source srcset="Images/optimized/rear-facade.webp" type="image/webp">
-                        <img src="Images/optimized/rear-facade.jpg" alt="Sunshine Residences — Rear Facade Artist Impression"
-                            loading="lazy">
+                        <img src="Images/optimized/rear-facade.jpg"
+                            alt="Sunshine Residences — Rear Facade Artist Impression" loading="lazy">
                     </picture>
                 </div>
                 <div class="vision__copy">
@@ -159,7 +161,8 @@
                     <div class="interior-card__image">
                         <picture>
                             <source srcset="Images/optimized/living-room.webp" type="image/webp">
-                            <img src="Images/optimized/living-room.jpg" alt="Artist Impression — Living Spaces" loading="lazy">
+                            <img src="Images/optimized/living-room.jpg" alt="Artist Impression — Living Spaces"
+                                loading="lazy">
                         </picture>
                     </div>
                     <div class="interior-card__body">
@@ -189,7 +192,8 @@
                     <div class="interior-card__image">
                         <picture>
                             <source srcset="Images/optimized/master-bedroom.webp" type="image/webp">
-                            <img src="Images/optimized/master-bedroom.jpg" alt="Artist Impression — Master Suite" loading="lazy">
+                            <img src="Images/optimized/master-bedroom.jpg" alt="Artist Impression — Master Suite"
+                                loading="lazy">
                         </picture>
                     </div>
                     <div class="interior-card__body">
@@ -226,8 +230,7 @@
             <div class="location__hero-image reveal">
                 <picture>
                     <source srcset="Images/optimized/sunshine-beach.webp" type="image/webp">
-                    <img src="Images/optimized/sunshine-beach.jpg" alt="Sunshine Beach — Aerial View"
-                        loading="lazy">
+                    <img src="Images/optimized/sunshine-beach.jpg" alt="Sunshine Beach — Aerial View" loading="lazy">
                 </picture>
             </div>
             <div class="location__grid">
@@ -337,21 +340,25 @@
             <p class="cta-repeat__text reveal">
                 Choose your session below. Each event is an exclusive, limited-attendance experience.
             </p>
+            <p class="cta-repeat__venue reveal">📍 Display Gallery — 2/16 Lanyana Way, Noosa Heads</p>
             <div class="cta-repeat__events">
                 <div class="cta-card reveal">
-                    <div class="cta-card__date">Thu 12 March</div>
-                    <div class="cta-card__time">5:00 PM</div>
-                    <button class="btn btn--primary" id="cta-bottom-event-1" data-event="Thursday 12 March · 5:00 PM">Reserve Your Spot</button>
+                    <div class="cta-card__date">Fri 20 March</div>
+                    <div class="cta-card__time">9 – 10 AM</div>
+                    <button class="btn btn--primary" id="cta-bottom-event-1"
+                        data-event="Friday 20 March · 9 – 10 AM">Reserve Now</button>
                 </div>
                 <div class="cta-card reveal reveal-delay-1">
                     <div class="cta-card__date">Fri 20 March</div>
-                    <div class="cta-card__time">9:00 AM</div>
-                    <button class="btn btn--primary" id="cta-bottom-event-2" data-event="Friday 20 March · 9:00 AM">Reserve Your Spot</button>
+                    <div class="cta-card__time">5 – 6 PM</div>
+                    <button class="btn btn--primary" id="cta-bottom-event-2"
+                        data-event="Friday 20 March · 5 – 6 PM">Reserve Now</button>
                 </div>
                 <div class="cta-card reveal reveal-delay-2">
                     <div class="cta-card__date">Thu 26 March</div>
-                    <div class="cta-card__time">5:00 PM · Final</div>
-                    <button class="btn btn--primary" id="cta-bottom-event-3" data-event="Thursday 26 March · 5:00 PM">Reserve Your Spot</button>
+                    <div class="cta-card__time">5 – 6 PM · Final</div>
+                    <button class="btn btn--primary" id="cta-bottom-event-3"
+                        data-event="Thursday 26 March · 5 – 6 PM">Reserve Now</button>
                 </div>
             </div>
         </div>
@@ -370,7 +377,8 @@
             method of measurement guidelines and are estimates only. Final product may differ from that described.
             Furnishings are not part of the purchase price.
         </p>
-        <p class="footer__credits">65–67 Elanda Street, Sunshine Beach &nbsp;·&nbsp; By Milona</p>
+        <p class="footer__credits">Development: 65 Elanda Street, Sunshine Beach &nbsp;·&nbsp; Display Gallery: 2/16
+            Lanyana Way, Noosa Heads &nbsp;·&nbsp; By Milona</p>
     </footer>
 
     <!-- ================================================================
@@ -383,37 +391,44 @@
 
             <!-- Form State -->
             <div class="modal__form-state" id="modal-form-state">
-                <p class="section-label">Reserve Your Spot</p>
-                <h2 class="modal__title" id="modal-title">Experience Sunshine — In Person</h2>
+                <p class="section-label">Reserve Now</p>
+                <h2 class="modal__title" id="modal-title">Display Gallery Event</h2>
                 <p class="modal__event-date" id="modal-event-date"></p>
 
                 <form id="booking-form" novalidate>
                     <div class="form-group">
                         <label for="field-name">Full Name</label>
-                        <input type="text" id="field-name" name="name" required autocomplete="name" placeholder="Your full name">
+                        <input type="text" id="field-name" name="name" required autocomplete="name"
+                            placeholder="Your full name" inputmode="text">
                     </div>
                     <div class="form-group">
                         <label for="field-email">Email Address</label>
-                        <input type="email" id="field-email" name="email" required autocomplete="email" placeholder="you@example.com">
+                        <input type="email" id="field-email" name="email" required autocomplete="email"
+                            placeholder="you@example.com" inputmode="email">
                     </div>
                     <div class="form-group">
-                        <label for="field-mobile">Mobile Number</label>
-                        <input type="tel" id="field-mobile" name="mobile" required autocomplete="tel" placeholder="04XX XXX XXX">
+                        <label for="field-phone">Phone</label>
+                        <input type="tel" id="field-phone" name="phone" required autocomplete="tel"
+                            placeholder="04XX XXX XXX" inputmode="tel">
                     </div>
                     <div class="form-group">
-                        <label for="field-reservations">Number of Reservations</label>
-                        <select id="field-reservations" name="reservations" required>
-                            <option value="" disabled selected>Select</option>
-                            <option value="1">1 person</option>
-                            <option value="2">2 people</option>
-                            <option value="3">3 people</option>
-                            <option value="4">4 people</option>
-                        </select>
+                        <label>Number of People</label>
+                        <input type="hidden" id="field-reservations" name="reservations" value="">
+                        <div class="people-picker" id="people-picker">
+                            <button type="button" class="people-picker__btn" data-value="1">1</button>
+                            <button type="button" class="people-picker__btn" data-value="2">2</button>
+                            <button type="button" class="people-picker__btn" data-value="3">3</button>
+                            <button type="button" class="people-picker__btn" data-value="4">4</button>
+                        </div>
                     </div>
+                    <p class="modal__consent">By submitting, you agree to our <a href="privacy-policy.html"
+                            target="_blank">Privacy Policy</a>.</p>
                     <button type="submit" class="btn btn--gold modal__submit" id="modal-submit">
                         <span class="modal__submit-text">Confirm Reservation</span>
                         <span class="modal__submit-loading" aria-hidden="true">
-                            <svg class="spinner" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+                            <svg class="spinner" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                            </svg>
                             Submitting…
                         </span>
                     </button>
@@ -423,15 +438,21 @@
             <!-- Success State -->
             <div class="modal__success-state" id="modal-success-state" aria-hidden="true">
                 <div class="modal__success-icon">
-                    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
                 </div>
                 <h2 class="modal__title">You're In.</h2>
-                <p class="modal__success-text">We've reserved your spot. You'll receive a confirmation email shortly with all the details.</p>
+                <p class="modal__success-text">We've reserved your spot. You'll receive a confirmation email shortly
+                    with all the details.</p>
                 <p class="modal__success-event" id="modal-success-event"></p>
                 <button class="btn btn--outline modal__done">Done</button>
             </div>
         </div>
     </div>
+
+    <!-- Persistent Reserve Now CTA -->
+    <button class="sticky-cta" id="sticky-cta" aria-label="Reserve Now">Reserve Now</button>
 
     <script src="script.js"></script>
 </body>

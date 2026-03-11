@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ——————————————————————————————————————————————
        CONFIG — Paste your Google Apps Script URL here
        —————————————————————————————————————————————— */
-    const GOOGLE_SCRIPT_URL = '';  // ← You'll paste the deployment URL here
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxaZeYWHyLcM7AiMDhdiOeDr6guw-ITkvxeCoGVZq1r_YdSIiZyEsKTqdm23oLHgtDC/exec';
 
 
     /* ——— Scroll Reveal (IntersectionObserver) ——— */
@@ -98,11 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function openModal() {
-        // Reset to form state
         formState.removeAttribute('aria-hidden');
         successState.setAttribute('aria-hidden', 'true');
         form.reset();
         clearValidation();
+        // Clear people picker selection
+        document.querySelectorAll('.people-picker__btn').forEach(b => b.classList.remove('is-active'));
+        document.getElementById('field-reservations').value = '';
+        document.getElementById('people-picker').classList.remove('is-invalid');
         submitBtn.classList.remove('is-loading');
 
         modal.classList.add('is-open');
@@ -145,8 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const name = document.getElementById('field-name');
         const email = document.getElementById('field-email');
-        const mobile = document.getElementById('field-mobile');
+        const mobile = document.getElementById('field-phone');
         const reservations = document.getElementById('field-reservations');
+        const peoplePicker = document.getElementById('people-picker');
 
         if (!name.value.trim()) {
             name.classList.add('is-invalid');
@@ -158,25 +162,64 @@ document.addEventListener('DOMContentLoaded', () => {
             valid = false;
         }
 
-        // Australian mobile: starts with 04, at least 10 digits
+        // Australian mobile: accept 04XX (10 digits), +614XX (12 chars), or bare 4XX (9 digits)
         const cleanMobile = mobile.value.replace(/[\s\-()]/g, '');
-        if (!cleanMobile || cleanMobile.length < 10) {
+        if (!cleanMobile || (cleanMobile.startsWith('+') ? cleanMobile.length < 12 : cleanMobile.length < 9)) {
             mobile.classList.add('is-invalid');
             valid = false;
         }
 
         if (!reservations.value) {
-            reservations.classList.add('is-invalid');
+            peoplePicker.classList.add('is-invalid');
             valid = false;
         }
 
         return valid;
     }
 
+    // Normalize mobile number after autofill: if +61 was stripped leaving 9 digits starting with 4, prepend 0
+    const mobileField = document.getElementById('field-phone');
+    function normalizeMobile() {
+        const raw = mobileField.value.replace(/[\s\-()]/g, '');
+        // Autofill stripped +61, left 9 digits starting with 4
+        if (/^4\d{8}$/.test(raw)) {
+            mobileField.value = '0' + mobileField.value.trim();
+        }
+        // Convert +61 to local 0 format
+        if (/^\+61/.test(raw)) {
+            mobileField.value = '0' + raw.slice(3);
+        }
+    }
+    mobileField.addEventListener('input', normalizeMobile);
+    mobileField.addEventListener('change', normalizeMobile);
+    mobileField.addEventListener('blur', normalizeMobile);
+
+    // Poll briefly after focus to catch autofill that doesn't fire input events
+    mobileField.addEventListener('focus', () => {
+        let checks = 0;
+        const poll = setInterval(() => {
+            if (mobileField.value) normalizeMobile();
+            if (++checks >= 10) clearInterval(poll);
+        }, 100);
+    });
+
     // Remove invalid state on input
-    form.querySelectorAll('input, select').forEach(el => {
+    form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]').forEach(el => {
         el.addEventListener('input', () => el.classList.remove('is-invalid'));
-        el.addEventListener('change', () => el.classList.remove('is-invalid'));
+    });
+
+    // People picker button logic
+    document.querySelectorAll('.people-picker__btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active from all
+            document.querySelectorAll('.people-picker__btn').forEach(b => b.classList.remove('is-active'));
+            // Set active on clicked
+            btn.classList.add('is-active');
+            // Set hidden input value
+            document.getElementById('field-reservations').value = btn.dataset.value;
+            // Clear invalid state
+            document.getElementById('people-picker').classList.remove('is-invalid');
+        });
     });
 
 
@@ -190,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = {
             name: document.getElementById('field-name').value.trim(),
             email: document.getElementById('field-email').value.trim(),
-            mobile: document.getElementById('field-mobile').value.trim(),
+            mobile: document.getElementById('field-phone').value.trim(),
             reservations: document.getElementById('field-reservations').value,
             event: selectedEvent
         };
@@ -228,6 +271,32 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.classList.remove('is-loading');
             submitBtn.disabled = false;
         }
+    });
+
+
+    /* ——— Sticky Reserve Now CTA ——— */
+    const stickyCta = document.getElementById('sticky-cta');
+    const heroEvents = document.querySelector('.hero__events');
+    const ctaRepeat = document.getElementById('book');
+
+    function updateStickyCta() {
+        const heroEventsRect = heroEvents.getBoundingClientRect();
+        const ctaRepeatRect = ctaRepeat.getBoundingClientRect();
+        const pastCards = heroEventsRect.bottom < 0;
+        const atBottomCta = ctaRepeatRect.top < window.innerHeight;
+
+        if (pastCards && !atBottomCta) {
+            stickyCta.classList.add('is-visible');
+        } else {
+            stickyCta.classList.remove('is-visible');
+        }
+    }
+
+    window.addEventListener('scroll', updateStickyCta, { passive: true });
+    updateStickyCta();
+
+    stickyCta.addEventListener('click', () => {
+        document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
     });
 
 });
